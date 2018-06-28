@@ -7,19 +7,19 @@ function takeANumber(line, person){
 }
 
 function nowServing(line){
-  //returns empty when no one on line
-  if (line.length = 0){
-    return 'There is nobody waiting to be served!';
-  }
-
-  else if (line.length > 0) {
-    //shifts line
-    //returns announcement about person it is serving
+//returns an announcement about the person it is serving,
+//and shifts the line
+// returns the line is empty when no on is on line
+  if (line.length > 0) {
     return `Currently serving ${line.shift()}.`
+    /*var currentlyServing = line[0];
+    line.shift();
+    return `Currently serving ${currentlyServing}.`;*/
   }
-
-
+  else
+    return 'There is nobody waiting to be served!';
 }
+
 
 function currentLine(line){
 
