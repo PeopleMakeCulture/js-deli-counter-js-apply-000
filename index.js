@@ -1,9 +1,12 @@
-function takeANumber(line, person){
+var number = 0
+
+function takeANumber(line){
   //adds a person to the line
-  line.push(person);
+  number = number + 1; //number+=1
+  line.push(number);
 
   //return message
-  return `Welcome, ${person}. You are number ${line.length} in line.`
+  return `Welcome. You are number ${number} in line.`
 }
 
 function nowServing(line){
@@ -12,6 +15,7 @@ function nowServing(line){
 // returns the line is empty when no on is on line
   if (line.length > 0) {
     //return `Currently serving ${line.shift()}.`
+    //var currentlyServing = line.shift();
     var currentlyServing = line[0];
     line.shift();
     return `Currently serving ${currentlyServing}.`;
