@@ -26,5 +26,10 @@ function currentLine(line){
     return `The line is currently empty.`;
   }
 
-  else
+  else {
+    const whosInLine = [];
+    for (let i = 0; i < line.length; i++)
+      whosInLine.push(`${i===0 ? '' : ' '}${i+1}. ${line[i]}`);
+    return `The line is currently: ${whosInLine}`;
+  }
 }
