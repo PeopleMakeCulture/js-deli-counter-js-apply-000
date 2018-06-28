@@ -3,7 +3,7 @@ function takeANumber(line, person){
   line.push(person);
 
   //return message
-  return `Welcome, ${person}. You are number ${line.length} in line.`
+  return "Welcome, ${person}. You are number ${line.length} in line."
 }
 
 function nowServing(line){
